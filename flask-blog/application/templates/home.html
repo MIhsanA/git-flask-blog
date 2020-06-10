@@ -1,8 +1,13 @@
 {% extends 'layout.html' %}
 {% block body_content %}
 
-{% if ........ %}
-<h1>{{ title }}</h1>
-{% endif % }
+
+{% for post in posts %}
+	{{ post.title }}<br>
+	{{ post.name.first }}<br>
+	{{ post.name.last }}<br>
+	{{ post.content }}<br><br>
+{% endfor %}
+
 
 {% endblock %}
