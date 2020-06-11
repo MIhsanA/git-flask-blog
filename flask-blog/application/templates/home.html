@@ -1,13 +1,21 @@
 {% extends 'layout.html' %}
 {% block body_content %}
 
+<h1>Home page</h1>
+<p>Welcome to this web app!</p>
 
-{% for post in posts %}
-	{{ post.title }}<br>
-	{{ post.name.first }}<br>
-	{{ post.name.last }}<br>
-	{{ post.content }}<br><br>
+{% if posts %}
+
+	{% for post in posts %}
+		{{ post.title }}<br>
+		{{ post.first_name }} {{ post.last_name }}<br>
+		{{ post.content }}<br><br>
 {% endfor %}
 
+{% else %}
+
+	<p> There are no post</P>
+
+	{% endif %} 
 
 {% endblock %}
