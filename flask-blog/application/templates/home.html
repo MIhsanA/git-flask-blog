@@ -8,8 +8,9 @@
 
 	{% for post in posts %}
 		{{ post.title }}<br>
-		{{ post.first_name }} {{ post.last_name }}<br>
-		{{ post.content }}<br><br>
+		{{ post.author.first_name }}<br>
+		{{ post.author.last_name }}<br>
+		{{ post.content }}<br>
 {% endfor %}
 
 {% else %}
